@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.contexts";
+import Checkout from "../productCheckout/checkout.comonent";
 
 import "./cartDropdown.styles.scss";
 import Button from "../button/button.component";
@@ -13,7 +14,9 @@ const CartDropdown = () => {
         {cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />
         ))}
-        <Button buttonType={"google"}>Checkout</Button>
+        <Button buttonType={"google"} onClick={Checkout}>
+          Checkout
+        </Button>
       </div>
     </div>
   );
